@@ -4,14 +4,15 @@ This is a basic Nest.js project that uses MongoDB as its database. It provides a
 # Installation
 You can clone the repository locally:
 
-git clone <repository_URL>
+- git clone <repository_URL>
 Navigate to the project directory:
 
-cd nest-mongoose-demo
+- cd nest-mongoose-demo
 Install the necessary dependencies:
 
-npm install
-Create a .env file at the root of the project and define the MONGO_CNX_STR environment variable with your corresponding database connection.
+- npm install
+
+- Create a .env file at the root of the project and define the MONGO_CNX_STR environment variable with your corresponding database connection.
 
 MONGO_CNX_STR=mongodb+srv://<username>:<password>@<cluster>/<database_name>?retryWrites=true&w=majority
 Note that the .env file will not be uploaded to the repository due to the configuration in the .gitignore file.
@@ -37,11 +38,11 @@ src: Contains all the source code of the application.
 # Tests
 The project includes tests to ensure its proper functioning:
 
-Unit tests
-npm run test
+- Unit tests
+  npm run test
 
-End-to-end tests
-npm run test:e2e
+- End-to-end tests
+  npm run test:e2e
 
-Test coverage
-npm run test:cov
+- Test coverage
+  npm run test:cov
