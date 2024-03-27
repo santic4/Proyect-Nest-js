@@ -20,7 +20,7 @@ Note that the .env file will not be uploaded to the repository due to the config
 # Usage
 Once you have installed the dependencies and configured your .env file, you can run the application using the following command:
 
-npm start
+- npm start
 This will start the development server. You can access the application at http://localhost:8080 by default.
 
 # Project Structure
