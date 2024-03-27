@@ -1,73 +1,47 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+Nest.js Project with MongoDB
+This is a basic Nest.js project that uses MongoDB as its database. It provides an initial structure for developing a web application using the Nest.js framework alongside the NoSQL MongoDB database.
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Installation
+You can clone the repository locally:
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+git clone <repository_URL>
+Navigate to the project directory:
 
-## Description
+cd nest-mongoose-demo
+Install the necessary dependencies:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+npm install
+Create a .env file at the root of the project and define the MONGO_CNX_STR environment variable with your corresponding database connection.
 
-## Installation
+MONGO_CNX_STR=mongodb+srv://<username>:<password>@<cluster>/<database_name>?retryWrites=true&w=majority
+Note that the .env file will not be uploaded to the repository due to the configuration in the .gitignore file.
 
-```bash
-$ npm install
-```
+Usage
+Once you have installed the dependencies and configured your .env file, you can run the application using the following command:
 
-## Running the app
+npm start
+This will start the development server. You can access the application at http://localhost:8080 by default.
 
-```bash
-# development
-$ npm run start
+Project Structure
+The project follows a standard directory structure of Nest.js:
 
-# watch mode
-$ npm run start:dev
+src: Contains all the source code of the application.
+  app.controller.ts: Main controller of the application.
+  app.module.ts: Main module of the application.
+  app.service.ts: Main service of the application.
+  main.ts: Entry point of the application.
+  middlewares: Folder containing custom middlewares.
+  users: Folder containing the module and files related to the "users" resource.
+  test: Directory for test files.
 
-# production mode
-$ npm run start:prod
-```
+Tests
+The project includes tests to ensure its proper functioning:
 
-## Test
+# Unit tests
+npm run test
 
-```bash
-# unit tests
-$ npm run test
+# End-to-end tests
+npm run test:e2e
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+# Test coverage
+npm run test:cov
